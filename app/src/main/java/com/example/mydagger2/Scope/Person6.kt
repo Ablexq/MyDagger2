@@ -2,7 +2,7 @@ package com.example.mydagger2.Scope
 
 import javax.inject.Inject
 
-@UserThirdScope
+@UserThirdScope //必须1/3
 class Person6 @Inject constructor() {
 
     var name: String? = null

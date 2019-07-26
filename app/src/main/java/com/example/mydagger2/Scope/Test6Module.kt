@@ -16,7 +16,7 @@ class Test6Module constructor(private var activity: Activity) {
     }
 
     @Provides
-    @UserThirdScope
+    @UserThirdScope //必须2/3
     fun getPerson(): Person6 {
         return Person6()
     }
