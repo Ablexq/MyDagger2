@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".test1.Test1Activity"/>
-        <activity android:name=".test2.Test2Activity"/>
-        <activity android:name=".test3.Test3Activity"/>
-        <activity android:name=".test4.Test4Activity"/>
+        <activity android:name=".ComponentModule.Test1Activity"/>
+        <activity android:name=".Inject.Test2Activity"/>
+        <activity android:name=".Named.Test3Activity"/>
+        <activity android:name=".Qualifier.Test4Activity"/>
         <activity android:name=".test5.Test5Activity"/>
     </application>
 

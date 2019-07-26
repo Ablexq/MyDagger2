@@ -4,10 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.mydagger2.test1.Test1Activity
-import com.example.mydagger2.test2.Test2Activity
-import com.example.mydagger2.test3.Test3Activity
-import com.example.mydagger2.test4.Test4Activity
+import com.example.mydagger2.ComponentModule.Test1Activity
+import com.example.mydagger2.Inject.Test2Activity
+import com.example.mydagger2.Named.Test3Activity
+import com.example.mydagger2.Qualifier.Test4Activity
 import com.example.mydagger2.test5.Test5Activity
 import kotlinx.android.synthetic.main.activity_main.*
 

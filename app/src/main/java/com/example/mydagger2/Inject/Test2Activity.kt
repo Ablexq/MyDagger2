@@ -1,4 +1,4 @@
-package com.example.mydagger2.test2
+package com.example.mydagger2.Inject
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

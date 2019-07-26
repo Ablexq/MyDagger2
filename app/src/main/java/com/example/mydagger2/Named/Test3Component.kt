@@ -1,4 +1,4 @@
-package com.example.mydagger2.test3
+package com.example.mydagger2.Named
 
 import dagger.Component
 

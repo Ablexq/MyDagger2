@@ -1,6 +1,5 @@
-package com.example.mydagger2.test4
+package com.example.mydagger2.Qualifier
 
-import java.lang.annotation.RetentionPolicy
 import javax.inject.Qualifier
 
 

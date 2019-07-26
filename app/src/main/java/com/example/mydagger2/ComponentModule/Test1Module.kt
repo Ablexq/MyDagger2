@@ -1,4 +1,4 @@
-package com.example.mydagger2.test1
+package com.example.mydagger2.ComponentModule
 
 import android.app.Activity
 import android.widget.TextView

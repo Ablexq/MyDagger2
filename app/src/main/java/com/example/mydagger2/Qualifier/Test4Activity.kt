@@ -1,12 +1,10 @@
-package com.example.mydagger2.test4
+package com.example.mydagger2.Qualifier
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mydagger2.R
 import kotlinx.android.synthetic.main.activity_test4.*
 import javax.inject.Inject
-import javax.inject.Named
-import javax.inject.Qualifier
 
 class Test4Activity : AppCompatActivity() {
 
