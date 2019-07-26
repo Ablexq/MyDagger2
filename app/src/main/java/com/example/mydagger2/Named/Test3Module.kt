@@ -8,7 +8,7 @@ import javax.inject.Named
 class Test3Module {
 
     @Provides
-    @Named("obj1")
+    @Named("obj1")      //必须1/2
     fun getPerson1() = Person3()
 
     @Provides

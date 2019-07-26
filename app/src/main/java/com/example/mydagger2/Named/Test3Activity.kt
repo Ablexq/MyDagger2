@@ -12,7 +12,7 @@ class Test3Activity : AppCompatActivity() {
 
     @Inject
     @JvmField
-    @Named("obj1")
+    @Named("obj1")      //必须2/2
     var person1: Person3? = null
 
     @Inject

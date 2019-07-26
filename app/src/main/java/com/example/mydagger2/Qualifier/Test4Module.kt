@@ -7,7 +7,7 @@ import dagger.Provides
 class Test4Module {
 
     @Provides
-    @UserThirdQualifier("obj1")
+    @UserThirdQualifier("obj1")     //必须1/2
     fun getPerson1() = Person4()
 
     @Provides

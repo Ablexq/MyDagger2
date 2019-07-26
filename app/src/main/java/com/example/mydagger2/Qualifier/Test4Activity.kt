@@ -10,7 +10,7 @@ class Test4Activity : AppCompatActivity() {
 
     @Inject
     @JvmField
-    @UserThirdQualifier("obj1")
+    @UserThirdQualifier("obj1") //必须2/2
     var person1: Person4? = null
 
     @Inject

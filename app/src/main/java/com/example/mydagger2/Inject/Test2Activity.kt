@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class Test2Activity : AppCompatActivity() {
 
-    @Inject
+    @Inject     //必须2/2
     @JvmField
     //Dagger does not support injection into private fields
     var person2: Person2? = null
