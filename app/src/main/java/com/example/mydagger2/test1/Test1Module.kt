@@ -1,17 +1,18 @@
 package com.example.mydagger2.test1
 
+import android.app.Activity
 import android.content.Context
 import android.widget.TextView
 import dagger.Module
 import dagger.Provides
 
 @Module
-class Test1Module {
-
+class Test1Module constructor(private var activity: Activity) {
+    //android.content.Context cannot be provided without an @Provides-annotated method.
 
     @Provides
-    fun getTextView(context: Context): TextView {
-        return TextView(context)
+    fun getTextView(): TextView {
+        return TextView(activity.applicationContext)
     }
 
     @Provides

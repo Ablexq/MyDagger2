@@ -1,4 +1,9 @@
 
+
+https://blog.csdn.net/briblue/article/details/75578459
+
+
+
 app build.gradle:
 
 ``` 
@@ -130,13 +135,59 @@ dependencies {
 # 相关常用注解：
   
 @Inject
+标记构造函数
+标记属性
+
 @Component
 @Module
 @Provides
 @Qualifier和@Named
 @Scope和@Singleton
 
+1.对象类的构造方法上添加 @Inject
+2.创建module类并添加 @Module ，在里面创建返回对象方法并添加 @Provides
+3.创建component接口并添加 @Component，引入module类 ，在里面创建注入目标的方法 
+4.build项目
+5.目标类中注入对象 @Inject
 
 
+Dagger does not support injection into private fields
 
+``` 
+@Inject
+@JvmField   //解决
+var textView: TextView? = null
 
+```
+
+android.content.Context cannot be provided without an @Provides-annotated method.
+
+``` 
+class Test1Module(activity: Activity) {
+
+    private val activity: Activity? = activity//解决
+
+    @Provides
+    fun getTextView(context: Context): TextView {
+        return TextView(activity?.applicationContext)
+    }
+}
+```
+ java.lang.IllegalStateException: com.example.mydagger2.test1.Test1Module must be set
+ 
+``` 
+ DaggerTest1Component.builder()
+     .test1Module(Test1Module(this))//  解决
+     .build()
+     .inject(this)
+```
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
