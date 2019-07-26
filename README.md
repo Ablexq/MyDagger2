@@ -108,7 +108,33 @@ kotlin.code.style=official
 https://github.com/google/dagger
 ```
 
+dagger2的依赖
+``` 
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'              //kotlin 
+apply plugin: 'kotlin-android-extensions'   //kotlin
+apply plugin: 'kotlin-kapt'                 //kotlin apt
 
+dependencies {
+    //dagger2 必须库
+    implementation 'com.google.dagger:dagger:2.23.2'
+    //dagger2 Java注解处理器
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.23.2'
+    //dagger2 kotlin注解处理器
+    kapt 'com.google.dagger:dagger-compiler:2.23.2'
+}
+
+```
+
+
+# 相关常用注解：
+  
+@Inject
+@Component
+@Module
+@Provides
+@Qualifier和@Named
+@Scope和@Singleton
 
 
 
