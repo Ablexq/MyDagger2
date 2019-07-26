@@ -21,7 +21,8 @@
         <activity android:name=".Inject.Test2Activity"/>
         <activity android:name=".Named.Test3Activity"/>
         <activity android:name=".Qualifier.Test4Activity"/>
-        <activity android:name=".test5.Test5Activity"/>
+        <activity android:name=".Singleton.Test5Activity"/>
+        <activity android:name=".Scope.Test6Activity"/>
     </application>
 
 </manifest>

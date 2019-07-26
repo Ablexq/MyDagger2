@@ -8,7 +8,8 @@ import com.example.mydagger2.ComponentModule.Test1Activity
 import com.example.mydagger2.Inject.Test2Activity
 import com.example.mydagger2.Named.Test3Activity
 import com.example.mydagger2.Qualifier.Test4Activity
-import com.example.mydagger2.test5.Test5Activity
+import com.example.mydagger2.Singleton.Test5Activity
+import com.example.mydagger2.Scope.Test6Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn3.setOnClickListener(this)
         btn4.setOnClickListener(this)
         btn5.setOnClickListener(this)
+        btn6.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn3 -> startActivity(Intent(this, Test3Activity::class.java))
             R.id.btn4 -> startActivity(Intent(this, Test4Activity::class.java))
             R.id.btn5 -> startActivity(Intent(this, Test5Activity::class.java))
+            R.id.btn6 -> startActivity(Intent(this, Test6Activity::class.java))
         }
     }
 
