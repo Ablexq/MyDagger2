@@ -150,6 +150,7 @@ dependencies {
 4.build项目
 5.目标类中注入对象 @Inject
 
+# 错误
 
 Dagger does not support injection into private fields
 
@@ -159,6 +160,9 @@ Dagger does not support injection into private fields
 var textView: TextView? = null
 
 ```
+原因：@Inject成员不能是private的
+
+# 错误
 
 android.content.Context cannot be provided without an @Provides-annotated method.
 
@@ -173,6 +177,8 @@ class Test1Module(activity: Activity) {
     }
 }
 ```
+ # 错误
+ 
  java.lang.IllegalStateException: com.example.mydagger2.test1.Test1Module must be set
  
 ``` 
@@ -182,11 +188,63 @@ class Test1Module(activity: Activity) {
      .inject(this)
 ```
 
+# 错误：
+```
+[Dagger/DuplicateBindings] 
+com.example.mydagger2.test3.Person3 is bound multiple times:
+```
+
+# 错误
+
+``` 
+[Dagger/MissingBinding] 
+java.lang.String cannot be provided without an 
+@Inject constructor or an @Provides-annotated method
+```
+
+没有provider或者inject
+如果component含有dependencies，可能没有向外面暴露
+
+# 错误
+
+``` 
+ Types may only contain one @Inject constructor
+    public Person3(@org.jetbrains.annotations.NotNull()
+```
+一个类的构造函数只能有一个有@inject
+
  
- 
- 
- 
- 
+java: 
+``` 
+public class MyTextView extends TextView {
+    public MyTextView(Context context) {
+        this(context,null);
+    }
+
+    public MyTextView(Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs,-1);
+    }
+
+    public MyTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+}
+```
+kotlin:
+``` 
+class MyTextView : TextView {
+    constructor(context: Context) :
+            this(context, null)
+
+    constructor(context: Context, attrs: AttributeSet?) :
+            this(context, attrs, -1)
+
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
+            super(context, attrs, defStyleAttr)
+
+}
+
+```
  
  
  

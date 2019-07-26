@@ -1,7 +1,6 @@
 package com.example.mydagger2.test1
 
 import android.app.Activity
-import android.content.Context
 import android.widget.TextView
 import dagger.Module
 import dagger.Provides
